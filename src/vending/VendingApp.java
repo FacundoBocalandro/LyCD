@@ -13,8 +13,8 @@ public class VendingApp {
         final VendingMachine vendingMachine = new VendingMachine();
         printOptions();
         System.out.println("\nInsert capsule and cup");
+        final Scanner scanner = new Scanner(System.in);
         while (true) {
-            Scanner scanner = new Scanner(System.in);
             String i = scanner.next();
             VendingInput input = null;
             int i2;
@@ -53,7 +53,7 @@ public class VendingApp {
                     }
 
                 }catch (UnsupportedOperationException e){
-                    System.out.println("Stop there Edward!");
+                    System.out.println("Unsupported operation!");
                 }
             }
         }
