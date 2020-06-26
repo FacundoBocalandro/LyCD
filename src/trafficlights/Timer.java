@@ -6,7 +6,7 @@ public class Timer {
     private boolean isInfinite;
 
     public Timer() {
-        time = 0;
+        time = -1;
         isInfinite = false;
     }
 
@@ -20,6 +20,6 @@ public class Timer {
 
     public void setTime(int waitTime) {
         this.time = waitTime;
-        if (waitTime > 100){isInfinite = true;}
+        isInfinite = waitTime > 100;
     }
 }
